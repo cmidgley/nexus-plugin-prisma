@@ -202,6 +202,9 @@ async function addGloballyComputedInputs({
   dmmf,
   data,
 }: AddDeepComputedInputsArgs): Promise<Record<string, any>> {
+  console.error('In addGloballyComputedInputs - return empty set')
+  let x = true
+  if (x) return {}
   if (Array.isArray(data)) {
     return Promise.all(
       data.map((value) =>
